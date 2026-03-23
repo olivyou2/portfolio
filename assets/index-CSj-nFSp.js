@@ -460,7 +460,7 @@ Error generating stack: `+e.message+`
     border: none;
 
     margin-top: 100px;
-    padding: 0px 20px;
+    padding: 0px 10px;
 `,Jr=j.div`
     font-size: 14px;
     color: #007BFF;
