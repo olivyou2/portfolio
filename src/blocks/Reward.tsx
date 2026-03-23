@@ -5,6 +5,8 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     border: none;
+
+    margin-top: 20px;
 `;
 
 const Title = styled.div`
