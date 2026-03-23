@@ -14,17 +14,6 @@ const Title = styled.div`
     color: #007BFF;
 `;
 
-const Content = styled.div`
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.7);
-    line-height: 130%;
-    text-align: center;
-    width: 100%;
-    max-width: 800px;
-`;
-
 const CareerContainer = styled.div`
     display: flex;
     flex-direction: column;
