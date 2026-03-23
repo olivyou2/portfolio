@@ -341,6 +341,8 @@ Error generating stack: `+e.message+`
     flex-direction: column;
     align-items: center;
     border: none;
+
+    margin-top: 20px;
 `,Nr=j.div`
     font-size: 14px;
     color: rgba(0, 0, 0, 0.6);
