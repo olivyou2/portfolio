@@ -6,6 +6,7 @@ import Reward from "./blocks/Reward";
 import TechStacks from "./blocks/TechStacks";
 import Values from "./blocks/Values";
 import Navigator from "./components/Navigator";
+import "./App.css";
 
 function App() {
 

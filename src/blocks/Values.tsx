@@ -7,6 +7,7 @@ const Container = styled.div`
     border: none;
 
     margin-top: 100px;
+    padding: 0px 20px;
 `;
 
 const Title = styled.div`
@@ -18,7 +19,7 @@ const ValuesContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     padding: 20px 0px;
     box-sizing: border-box;
@@ -103,7 +104,7 @@ function Values() {
                     </ValueContainer>
                     <ValueContainer>
                         <ValueTitle>Zero 기술부채</ValueTitle>
-                        <ValueDescription>AI에 대한 과도한 의존은 소스의 원천을 흐리고, 감당할 수 없는 기술 부채를 남깁니다. 지금은 많은 이들이 '바이브 코딩'으로 결과물을 쏟아내고 있지만, 결국 시스템을 지배하는 건 그 근본을 깊이 이해하는 사람입니다. <b>이 사이트도 대부분은 손코딩으로 개발했습니다!</b></ValueDescription>
+                        <ValueDescription>AI에 대한 과도한 의존은 소스의 원천을 흐리고, 감당할 수 없는 기술 부채를 남깁니다. 지금은 많은 이들이 '바이브 코딩'으로 결과물을 쏟아내고 있지만, 결국 시스템을 지배하는 건 그 근본을 깊이 이해하는 사람입니다. <b>이 사이트도 대부분은 손코딩으로 개발되었습니다!</b></ValueDescription>
                     </ValueContainer>
 
                 </ValuesContainer>

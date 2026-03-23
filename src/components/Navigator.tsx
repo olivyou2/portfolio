@@ -9,16 +9,27 @@ const Title = styled.div`
     font-size: 14px;
     color: #b1b1b1;
     margin-bottom: 10px;
+
+    padding-top: 100px;
+    
+    @media screen and (max-width: 550px) {
+        display: none;
+    }
 `;
 
 const Container = styled.div`
-    position: sticky;
-    top: 25px;
     width: 100%;
     display: flex;
     height: 50px;
     justify-content: center;
+
+    position: sticky;
+    top: 25px;
     z-index: 10;
+
+    @media screen and (max-width: 550px) {
+        display: none;
+    }
 `;
 
 const Box = styled.div`
@@ -61,16 +72,10 @@ const Column = styled.div`
     }
 `;
 
-const NavigatorContainer = styled.div`
-padding-top: 100px;
-    @media screen and (max-width: 550px) {
-        display: none;
-    }
-`;
-
 function Navigator() {
     const sections = useMemo(() => ["values", "techStacks", "portfolio", "career", "contact"], []);
     const [selectedSection, setSelectedSection] = useState("");
+    const navigatorOffset = 110;
 
     useEffect(() => {
         const updateSelectedSectionByScroll = () => {
@@ -106,12 +111,13 @@ function Navigator() {
         const section = document.getElementById(sectionId);
         if (section) {
             setSelectedSection(sectionId);
-            section.scrollIntoView({ behavior: "smooth" });
+            const targetY = Math.max(0, section.getBoundingClientRect().top + window.scrollY - navigatorOffset);
+            window.scrollTo({ top: targetY, behavior: "smooth" });
         }
     };
 
     return (
-        <NavigatorContainer id="navigator">
+        <>
             <Title>Shortcut</Title>
             <Container>
                 <Box>
@@ -132,7 +138,7 @@ function Navigator() {
                     </Column>
                 </Box>
             </Container>
-        </NavigatorContainer>
+        </>
     )
 }
 
