@@ -128,7 +128,7 @@ function TechStacks() {
         "백엔드",
         "하드웨어",
         "클라우드",
-        "인프라"
+        "인프라 / DB"
     ];
 
     const techStackDetails: { [key: string]: { title: string, icon_url: string }[] } = {
@@ -176,12 +176,12 @@ function TechStacks() {
             icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg"
         },
         {
-            title: "Electron",
-            icon_url: "https://www.svgrepo.com/show/443033/brand-electron.svg"
-        },
-        {
             title: "NextJS",
             icon_url: "https://www.svgrepo.com/show/354113/nextjs-icon.svg"
+        },
+        {
+            title: "Electron",
+            icon_url: "https://www.svgrepo.com/show/443033/brand-electron.svg"
         }
 
         ],
@@ -251,10 +251,40 @@ function TechStacks() {
             title: "Vast.AI",
             icon_url: "https://wikia.schneedc.com/cloudservice/vast-logo.svg"
         }],
-        "인프라": [{
-            title: "Docker",
-            icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-        }]
+        "인프라 / DB": [
+            {
+                title: "Docker",
+                icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            },
+            {
+                title: "Jenkins",
+                icon_url: "https://www.svgrepo.com/show/373699/jenkins.svg"
+            },
+            {
+                title: "GitHub",
+                icon_url: "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            },
+            {
+                title: "GitLab",
+                icon_url: "https://www.svgrepo.com/show/373625/gitlab.svg"
+            },
+            {
+                title: "MySQL",
+                icon_url: "https://www.svgrepo.com/show/373848/mysql.svg"
+            },
+            {
+                title: "PostgreSQL",
+                icon_url: "https://www.svgrepo.com/show/354200/postgresql.svg"
+            },
+            {
+                title: "MongoDB",
+                icon_url: "https://www.svgrepo.com/show/331488/mongodb.svg"
+            },
+            {
+                title: "Redis",
+                icon_url: "https://www.svgrepo.com/show/354272/redis.svg"
+            }
+        ]
     };
 
     const visibleStacks = useMemo(() => {
