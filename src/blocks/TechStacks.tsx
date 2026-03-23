@@ -60,6 +60,16 @@ const Menu = styled.div<{ active?: boolean }>`
 
         font-size: 14px;
         padding: 8px 16px;
+            
+        ${(props) => props.active && `
+            background-color: #007BFF;
+            color: white;
+
+            &:hover {
+                background-color: #007BFF;
+                color: white;
+            }
+        `}
     }
 `;
 
