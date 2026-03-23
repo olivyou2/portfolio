@@ -416,6 +416,16 @@ Error generating stack: `+e.message+`
 
         font-size: 14px;
         padding: 8px 16px;
+            
+        ${e=>e.active&&`
+            background-color: #007BFF;
+            color: white;
+
+            &:hover {
+                background-color: #007BFF;
+                color: white;
+            }
+        `}
     }
 `,Hr=j.div`
     margin-top: 20px;
