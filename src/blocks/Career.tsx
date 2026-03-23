@@ -4,7 +4,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
     border: none;
 `;
 
@@ -26,7 +25,8 @@ const CareerItemContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 `;
 
 const CareerItemLeft = styled.div`
@@ -35,17 +35,25 @@ const CareerItemLeft = styled.div`
 
     position: relative;
     padding: 20px 0px;
-    width: 300px;
-`;
+    width: 50%;
 
+    @media screen and (max-width: 550px) {
+        width: calc(100% - 20px);
+    }
+`;
 
 const CareerItemRight = styled.div`
     display: flex;
-    margin-left: 300px;
+    margin-left: 50%;
     flex-direction: column;
 
     position: relative;
     padding: 20px 0px;
+
+    @media screen and (max-width: 550px) {
+        width: calc(100% - 20px);
+        margin-left: 20px;
+    }
 `;
 
 const CareerTimeline = styled.div`
@@ -77,6 +85,12 @@ const CareerTimelineLine = styled.div`
     position: absolute;
 
     &.last {
+        background: linear-gradient(180deg,rgba(0, 123, 255, 1) 0%, rgba(107, 172, 242, 1) 24%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    
+
+    @media screen and (max-width: 550px) {
         background: linear-gradient(180deg,rgba(0, 123, 255, 1) 0%, rgba(107, 172, 242, 1) 24%, rgba(255, 255, 255, 1) 100%);
     }
 `;
@@ -206,6 +220,13 @@ function Career() {
             category: "웹 서비스",
             description: "기존에 운영하던 웹사이트 리팩토링 및 신규 기능 다수 개발 등 웹 서비스 개발 전반 참여, 웹뷰 형식의 모바일 앱 개발 및 출시",
             tags: ["PHP", "MySQL", "AWS", "Flutter"]
+        },
+        {
+            time: "2024.02 - 2025.08",
+            title: "군복무",
+            category: "육군",
+            description: "이동통신운용병으로 22사단 정보통신대대 병장 만기전역",
+            tags: []
         }
     ]
 

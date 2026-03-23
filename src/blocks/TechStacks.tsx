@@ -5,10 +5,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
     box-sizing: border-box;
     border: none;
 
+    padding: 0px 10px;
     width: 100%;
 `;
 
@@ -25,11 +25,14 @@ const MenuContainer = styled.div`
     padding: 20px 0px;
     box-sizing: border-box;
     column-gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 10px;
 `;
 
 const Menu = styled.div<{ active?: boolean }>`
     font-size: 16px;
     font-weight: 500;
+    flex-shrink: 0;
     color: rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
     border-radius: 20px;
@@ -50,6 +53,14 @@ const Menu = styled.div<{ active?: boolean }>`
             color: white;
         }
     `}
+
+    
+    @media screen and (max-width: 550px) {
+        background-color: rgba(0, 0, 0, 0.02);
+
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 `;
 
 const TechStackDetails = styled.div`
@@ -59,24 +70,24 @@ const TechStackDetails = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 10px;
+
+    @media screen and (max-width: 550px) {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
 `;
 
 const TechStackItem = styled.div<{ visible: boolean; delay: number }>`
     padding: 10px;
+    box-sizing: border-box;
     background-color: white;
 
     border-radius: 100%;
     text-align: center;
-    height: 100px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    &:hover{
-        background-color: rgba(0, 0, 0, 0.03);
-    }
 
     transition: ${(props => `background-color 0.2s ease, opacity 0.5s ease ${props.delay}ms, transform 0.5s ease ${props.delay}ms;`)};
 

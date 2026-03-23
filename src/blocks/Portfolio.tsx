@@ -19,6 +19,8 @@ const PortfolioContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     column-gap: 10px;
+    flex-wrap: wrap;
+    row-gap: 20px;
 
     margin-top: 20px;
 `;

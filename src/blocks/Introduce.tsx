@@ -4,8 +4,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
     border: none;
+
+    padding-top: 100px;
 `;
 
 const ProfileImage = styled.img`
@@ -19,6 +20,12 @@ const Description = styled.div`
     font-size: 34px;
     font-weight: 700;
     margin-top: 40px;
+
+    padding: 0px 15px;
+
+    @media screen and (max-width: 550px) {
+        font-size: 24px;
+    }
 `;
 
 const Line = styled.div`
@@ -37,6 +44,14 @@ const Subdescription = styled.div`
     margin-top: 20px;
     color: #555;
     text-align: center;
+    
+    
+    padding: 0px 15px;
+
+    @media screen and (max-width: 550px) {
+        font-size: 14px;
+        text-align: center;
+    }
 `;
 
 function Introduce() {

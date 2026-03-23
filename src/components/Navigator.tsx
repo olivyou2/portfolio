@@ -61,6 +61,13 @@ const Column = styled.div`
     }
 `;
 
+const NavigatorContainer = styled.div`
+padding-top: 100px;
+    @media screen and (max-width: 550px) {
+        display: none;
+    }
+`;
+
 function Navigator() {
     const sections = useMemo(() => ["values", "techStacks", "portfolio", "career", "contact"], []);
     const [selectedSection, setSelectedSection] = useState("");
@@ -103,10 +110,8 @@ function Navigator() {
         }
     };
 
-
-
     return (
-        <>
+        <NavigatorContainer id="navigator">
             <Title>Shortcut</Title>
             <Container>
                 <Box>
@@ -127,7 +132,7 @@ function Navigator() {
                     </Column>
                 </Box>
             </Container>
-        </>
+        </NavigatorContainer>
     )
 }
 

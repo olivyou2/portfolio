@@ -4,8 +4,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
     border: none;
+
+    margin-top: 100px;
 `;
 
 const Title = styled.div`
@@ -17,19 +18,33 @@ const ValuesContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 20px 0px;
     box-sizing: border-box;
     column-gap: 20px;
+
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+        row-gap: 20px;
+    }
 `;
 
 const ValueContainer = styled.div`
     flex: 1;
     max-width: 250px;
+    /* margin: auto; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 550px) {
+        max-width: none;
+        width: 100%;
+        padding: 0px 15px;
+        box-sizing: border-box;
+    }
 `;
 
 const ValueTitle = styled.div`
@@ -38,6 +53,11 @@ const ValueTitle = styled.div`
 
     text-align: center;
     width: 100%;
+    
+    @media screen and (max-width: 550px) {
+        font-size: 16px;
+        text-align: left;
+    }
 `;
 
 const ValueDescription = styled.div`
@@ -52,6 +72,12 @@ const ValueDescription = styled.div`
     text-align: justify;
 
     text-justify: inter-word;
+
+    
+
+    @media screen and (max-width: 550px) {
+        font-size: 14px;
+    }
 `;
 
 function Values() {

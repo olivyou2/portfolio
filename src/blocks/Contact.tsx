@@ -5,7 +5,6 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px 100px;
     border: none;
 
     height: 100vh;
@@ -38,19 +37,20 @@ const ContactContainer = styled.div`
     padding: 20px 0px;
     box-sizing: border-box;
     column-gap: 20px;
+    row-gap: 10px;
 `;
 
 const ContactMenu = styled.div`
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
+    padding: 5px 20px;
     border-radius: 20px;
     transition: background-color 0.2s ease, color 0.2s ease;
     cursor: pointer;
     &:hover {
         background-color: rgba(0, 0, 0, 0.05);
-        color: rgba(0, 0, 0, 0.9);
+        color: rgba(0, 0, 0, 0.7);
     }
 `;
 
