@@ -12,6 +12,7 @@ Error generating stack: `+e.message+`
     flex-direction: column;
     align-items: center;
     border: none;
+    margin-top: 100px;
 `,Wn=j.div`
     font-size: 14px;
     color: #007BFF;
@@ -240,8 +241,9 @@ Error generating stack: `+e.message+`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
+    padding: 0px 10px;
     border: none;
+    margin-top: 100px;
 `,yr=j.div`
     font-size: 14px;
     color: #007BFF;
@@ -456,6 +458,7 @@ Error generating stack: `+e.message+`
     border: none;
 
     margin-top: 100px;
+    padding: 0px 20px;
 `,Jr=j.div`
     font-size: 14px;
     color: #007BFF;
@@ -463,7 +466,7 @@ Error generating stack: `+e.message+`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     padding: 20px 0px;
     box-sizing: border-box;
@@ -517,20 +520,31 @@ Error generating stack: `+e.message+`
     @media screen and (max-width: 550px) {
         font-size: 14px;
     }
-`;function $r(){return(0,M.jsx)(`div`,{id:`values`,children:(0,M.jsxs)(qr,{children:[(0,M.jsx)(Jr,{children:`가치관`}),(0,M.jsxs)(Yr,{children:[(0,M.jsxs)(Xr,{children:[(0,M.jsx)(Zr,{children:`소통 Driven Develop`}),(0,M.jsx)(Qr,{children:`한 명의 천재보다 위대한 것은  정교하게 설계된 시스템입니다. 현대 프로세서가 멀티코어 스케줄링과 IPC 개선으로 한계를 돌파하듯, 개발의 핵심 또한 개별 코어의 성능을 넘어 '협업의 최적화'로 나아가고 있습니다.`})]}),(0,M.jsxs)(Xr,{children:[(0,M.jsx)(Zr,{children:`Accelerated Intelligence`}),(0,M.jsx)(Qr,{children:`인공지능이 인간의 지능을 가속화하는 시대에, 개발자는 단순한 도구 제작자가 아니라 '지능 가속의 설계자'로서, 인간과 기계가 함께 진화하는 미래를 만들어가야 합니다.`})]}),(0,M.jsxs)(Xr,{children:[(0,M.jsx)(Zr,{children:`Zero 기술부채`}),(0,M.jsxs)(Qr,{children:[`AI에 대한 과도한 의존은 소스의 원천을 흐리고, 감당할 수 없는 기술 부채를 남깁니다. 지금은 많은 이들이 '바이브 코딩'으로 결과물을 쏟아내고 있지만, 결국 시스템을 지배하는 건 그 근본을 깊이 이해하는 사람입니다. `,(0,M.jsx)(`b`,{children:`이 사이트도 대부분은 손코딩으로 개발했습니다!`})]})]})]})]})})}var ei=j.div`
+`;function $r(){return(0,M.jsx)(`div`,{id:`values`,children:(0,M.jsxs)(qr,{children:[(0,M.jsx)(Jr,{children:`가치관`}),(0,M.jsxs)(Yr,{children:[(0,M.jsxs)(Xr,{children:[(0,M.jsx)(Zr,{children:`소통 Driven Develop`}),(0,M.jsx)(Qr,{children:`한 명의 천재보다 위대한 것은  정교하게 설계된 시스템입니다. 현대 프로세서가 멀티코어 스케줄링과 IPC 개선으로 한계를 돌파하듯, 개발의 핵심 또한 개별 코어의 성능을 넘어 '협업의 최적화'로 나아가고 있습니다.`})]}),(0,M.jsxs)(Xr,{children:[(0,M.jsx)(Zr,{children:`Accelerated Intelligence`}),(0,M.jsx)(Qr,{children:`인공지능이 인간의 지능을 가속화하는 시대에, 개발자는 단순한 도구 제작자가 아니라 '지능 가속의 설계자'로서, 인간과 기계가 함께 진화하는 미래를 만들어가야 합니다.`})]}),(0,M.jsxs)(Xr,{children:[(0,M.jsx)(Zr,{children:`Zero 기술부채`}),(0,M.jsxs)(Qr,{children:[`AI에 대한 과도한 의존은 소스의 원천을 흐리고, 감당할 수 없는 기술 부채를 남깁니다. 지금은 많은 이들이 '바이브 코딩'으로 결과물을 쏟아내고 있지만, 결국 시스템을 지배하는 건 그 근본을 깊이 이해하는 사람입니다. `,(0,M.jsx)(`b`,{children:`이 사이트도 대부분은 손코딩으로 개발되었습니다!`})]})]})]})]})})}var ei=j.div`
     width: 100%;
     text-align: center;
     font-size: 14px;
     color: #b1b1b1;
     margin-bottom: 10px;
+
+    padding-top: 100px;
+    
+    @media screen and (max-width: 550px) {
+        display: none;
+    }
 `,ti=j.div`
-    position: sticky;
-    top: 25px;
     width: 100%;
     display: flex;
     height: 50px;
     justify-content: center;
+
+    position: sticky;
+    top: 25px;
     z-index: 10;
+
+    @media screen and (max-width: 550px) {
+        display: none;
+    }
 `,ni=j.div`
     display: flex;
     justify-content: center;
@@ -567,9 +581,4 @@ Error generating stack: `+e.message+`
         padding: 0px 22px;
         background-color: white;
     }
-`,ii=j.div`
-padding-top: 100px;
-    @media screen and (max-width: 550px) {
-        display: none;
-    }
-`;function ai(){let e=(0,_.useMemo)(()=>[`values`,`techStacks`,`portfolio`,`career`,`contact`],[]),[t,n]=(0,_.useState)(``);(0,_.useEffect)(()=>{let t=()=>{let t=window.scrollY+window.innerHeight*.3,r=e[0]??``;for(let n of e){let e=document.getElementById(n);e&&t>=e.getBoundingClientRect().top+window.scrollY&&(r=n)}n(r)};return t(),window.addEventListener(`scroll`,t),window.addEventListener(`resize`,t),()=>{window.removeEventListener(`scroll`,t),window.removeEventListener(`resize`,t)}},[e]);let r=e=>{let t=document.getElementById(e);t&&(n(e),t.scrollIntoView({behavior:`smooth`}))};return(0,M.jsxs)(ii,{id:`navigator`,children:[(0,M.jsx)(ei,{children:`Shortcut`}),(0,M.jsx)(ti,{children:(0,M.jsxs)(ni,{children:[(0,M.jsx)(ri,{className:t===`values`?`selected`:``,onClick:()=>r(`values`),children:`가치관`}),(0,M.jsx)(ri,{className:t===`techStacks`?`selected`:``,onClick:()=>r(`techStacks`),children:`기술 스택`}),(0,M.jsx)(ri,{className:t===`portfolio`?`selected`:``,onClick:()=>r(`portfolio`),children:`포트폴리오`}),(0,M.jsx)(ri,{className:t===`career`?`selected`:``,onClick:()=>r(`career`),children:`이력`}),(0,M.jsx)(ri,{className:t===`contact`?`selected`:``,onClick:()=>r(`contact`),children:`연락`})]})})]})}function oi(){return(0,M.jsxs)(M.Fragment,{children:[(0,M.jsx)(_r,{}),(0,M.jsx)(ai,{}),(0,M.jsx)($r,{}),(0,M.jsx)(Kr,{}),(0,M.jsx)(jr,{}),(0,M.jsx)(ir,{}),(0,M.jsx)(Lr,{}),(0,M.jsx)(ur,{})]})}(0,g.createRoot)(document.getElementById(`root`)).render((0,M.jsx)(_.StrictMode,{children:(0,M.jsx)(oi,{})}));
+`;function ii(){let e=(0,_.useMemo)(()=>[`values`,`techStacks`,`portfolio`,`career`,`contact`],[]),[t,n]=(0,_.useState)(``);(0,_.useEffect)(()=>{let t=()=>{let t=window.scrollY+window.innerHeight*.3,r=e[0]??``;for(let n of e){let e=document.getElementById(n);e&&t>=e.getBoundingClientRect().top+window.scrollY&&(r=n)}n(r)};return t(),window.addEventListener(`scroll`,t),window.addEventListener(`resize`,t),()=>{window.removeEventListener(`scroll`,t),window.removeEventListener(`resize`,t)}},[e]);let r=e=>{let t=document.getElementById(e);if(t){n(e);let r=Math.max(0,t.getBoundingClientRect().top+window.scrollY-110);window.scrollTo({top:r,behavior:`smooth`})}};return(0,M.jsxs)(M.Fragment,{children:[(0,M.jsx)(ei,{children:`Shortcut`}),(0,M.jsx)(ti,{children:(0,M.jsxs)(ni,{children:[(0,M.jsx)(ri,{className:t===`values`?`selected`:``,onClick:()=>r(`values`),children:`가치관`}),(0,M.jsx)(ri,{className:t===`techStacks`?`selected`:``,onClick:()=>r(`techStacks`),children:`기술 스택`}),(0,M.jsx)(ri,{className:t===`portfolio`?`selected`:``,onClick:()=>r(`portfolio`),children:`포트폴리오`}),(0,M.jsx)(ri,{className:t===`career`?`selected`:``,onClick:()=>r(`career`),children:`이력`}),(0,M.jsx)(ri,{className:t===`contact`?`selected`:``,onClick:()=>r(`contact`),children:`연락`})]})})]})}function ai(){return(0,M.jsxs)(M.Fragment,{children:[(0,M.jsx)(_r,{}),(0,M.jsx)(ii,{}),(0,M.jsx)($r,{}),(0,M.jsx)(Kr,{}),(0,M.jsx)(jr,{}),(0,M.jsx)(ir,{}),(0,M.jsx)(Lr,{}),(0,M.jsx)(ur,{})]})}(0,g.createRoot)(document.getElementById(`root`)).render((0,M.jsx)(_.StrictMode,{children:(0,M.jsx)(ai,{})}));
