@@ -7,7 +7,7 @@ const Container = styled.div`
     border: none;
 
     margin-top: 100px;
-    padding: 0px 20px;
+    padding: 0px 10px;
 `;
 
 const Title = styled.div`
