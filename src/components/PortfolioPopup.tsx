@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import type { techStackType } from "../types/techStackType";
 import useEmblaCarousel from "embla-carousel-react";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const Container = styled.div`
     padding: 40px 30px 50px 30px;

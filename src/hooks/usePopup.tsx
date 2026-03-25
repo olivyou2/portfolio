@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { usePopupState } from "../types/usePopupState";
 
 function usePopup(): usePopupState {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const [payload, setPayload] = useState<any>(null);
 
     const openPopup = (data?: any) => {
