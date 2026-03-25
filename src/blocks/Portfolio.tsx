@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import type { usePopupState } from "../types/usePopupState";
 
 const Container = styled.div`
     display: flex;
@@ -7,6 +8,7 @@ const Container = styled.div`
     padding: 0px 10px;
     border: none;
     margin-top: 100px;
+    overflow: visible;
 `;
 
 
@@ -24,6 +26,7 @@ const PortfolioContainer = styled.div`
     row-gap: 20px;
 
     margin-top: 20px;
+    overflow: visible;
 `;
 
 const PortfolioItem = styled.div`
@@ -33,13 +36,17 @@ const PortfolioItem = styled.div`
     padding: 15px;
     border-radius: 15px;
     background: white;
+
+    user-select: none;
+    cursor: pointer;
     
     filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.1));
     transform: translateY(0);
-    transition: transform ease 0.2s;
+    transition: transform ease 0.2s, background-color ease 0.2s;
 
     &:hover {
         transform: translateY(-5px);
+        background: rgba(250, 250, 250);
     }
 `;
 
@@ -126,14 +133,22 @@ const PortfolioTagItem = styled.div`
     padding: 4px 8px;
 `;
 
-function Portfolio() {
+function Portfolio({
+    portfolioPopupState
+}: {
+    portfolioPopupState: usePopupState;
+}) {
+    const onClickItem = (payload: string) => {
+        portfolioPopupState.openPopup(payload);
+    }
+
     return (
         <div id="portfolio">
             <Container>
                 <Title>포트폴리오</Title>
                 <PortfolioContainer>
                     {/* 언타이틀 */}
-                    <PortfolioItem>
+                    <PortfolioItem onClick={() => onClickItem("untitle")}>
                         <PortfolioImg src="portfolio_untitle.png" />
                         <PortfolioLinkContainer>
                             <PortfolioLinkItem>GitHub <PortfolioLinkIcon src="link.svg" /></PortfolioLinkItem>
@@ -150,7 +165,7 @@ function Portfolio() {
                     </PortfolioItem>
 
                     {/* 마그마 */}
-                    <PortfolioItem>
+                    <PortfolioItem onClick={() => onClickItem("magma")}>
                         <PortfolioImg src="portfolio_magma.png" />
                         <PortfolioLinkContainer>
                             <PortfolioLinkItem onClick={() => window.open("https://마그마.site", "_blank")}>Web <PortfolioLinkIcon src="link.svg" /></PortfolioLinkItem>

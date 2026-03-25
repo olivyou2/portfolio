@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "embla-carousel-react": "^8.6.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "styled": "^1.0.0",

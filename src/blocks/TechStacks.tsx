@@ -29,7 +29,7 @@ const MenuContainer = styled.div`
     row-gap: 10px;
 `;
 
-const Menu = styled.div<{ active?: boolean }>`
+const Menu = styled.div<{ $active?: boolean }>`
     font-size: 16px;
     font-weight: 500;
     flex-shrink: 0;
@@ -44,7 +44,7 @@ const Menu = styled.div<{ active?: boolean }>`
         color: rgba(0, 0, 0, 0.9);
     }
 
-    ${(props) => props.active && `
+    ${(props) => props.$active && `
         background-color: #007BFF;
         color: white;
 
@@ -61,7 +61,7 @@ const Menu = styled.div<{ active?: boolean }>`
         font-size: 14px;
         padding: 8px 16px;
             
-        ${(props) => props.active && `
+        ${(props) => props.$active && `
             background-color: #007BFF;
             color: white;
 
@@ -86,7 +86,7 @@ const TechStackDetails = styled.div`
     }
 `;
 
-const TechStackItem = styled.div<{ visible: boolean; delay: number }>`
+const TechStackItem = styled.div<{ $visible: boolean; $delay: number }>`
     padding: 10px;
     box-sizing: border-box;
     background-color: white;
@@ -99,10 +99,10 @@ const TechStackItem = styled.div<{ visible: boolean; delay: number }>`
     justify-content: center;
     align-items: center;
 
-    transition: ${(props => `background-color 0.2s ease, opacity 0.5s ease ${props.delay}ms, transform 0.5s ease ${props.delay}ms;`)};
+    transition: ${(props => `background-color 0.2s ease, opacity 0.5s ease ${props.$delay}ms, transform 0.5s ease ${props.$delay}ms;`)};
 
-    opacity: ${(props) => (props.visible ? 1 : 0)};
-    transform: ${(props) => (props.visible ? "translateY(0px)" : "translateY(20px)")};
+    opacity: ${(props) => (props.$visible ? 1 : 0)};
+    transform: ${(props) => (props.$visible ? "translateY(0px)" : "translateY(20px)")};
 `;
 
 const TechStackItemIcon = styled.img`
@@ -248,8 +248,8 @@ function TechStacks() {
             icon_url: "https://www.svgrepo.com/show/448245/oracle.svg"
         },
         {
-            title: "Vast.AI",
-            icon_url: "https://wikia.schneedc.com/cloudservice/vast-logo.svg"
+            title: "vast.ai",
+            icon_url: "https://media.licdn.com/dms/image/v2/D560BAQGgKIB0nw25IQ/company-logo_200_200/B56Zd.Lax3GoAU-/0/1750168612356/vast_ai_logo?e=2147483647&v=beta&t=lWGOR0xTqJ1J40o1IM9ZLhMmXFatDsbKkECdbq06PaQ"
         }],
         "인프라 / DB": [
             {
@@ -283,6 +283,10 @@ function TechStacks() {
             {
                 title: "Redis",
                 icon_url: "https://www.svgrepo.com/show/354272/redis.svg"
+            },
+            {
+                title: "Nginx",
+                icon_url: "https://www.svgrepo.com/show/373924/nginx.svg"
             }
         ]
     };
@@ -333,14 +337,14 @@ function TechStacks() {
                     기술 스택
                 </Title>
                 <MenuContainer>
-                    <Menu active={selectedStack === "전체"} onClick={() => changeCategory("전체")}>전체</Menu>
+                    <Menu $active={selectedStack === "전체"} onClick={() => changeCategory("전체")}>전체</Menu>
                     {techStacks.map((stack) => (
-                        <Menu key={stack} active={selectedStack === stack} onClick={() => changeCategory(stack)}>{stack}</Menu>
+                        <Menu key={stack} $active={selectedStack === stack} onClick={() => changeCategory(stack)}>{stack}</Menu>
                     ))}
                 </MenuContainer>
                 <TechStackDetails>
                     {visibleStacks.map((tech, index) => (
-                        <TechStackItem key={`${selectedStack}-${index}`} visible={isInView} delay={index * 20}>
+                        <TechStackItem key={`${selectedStack}-${index}`} $visible={isInView} $delay={index * 20}>
                             <TechStackItemIcon src={tech.icon_url} alt={tech.title} />
                             <TechStackItemTitle>{tech.title}</TechStackItemTitle>
                         </TechStackItem>
